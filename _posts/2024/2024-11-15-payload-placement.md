@@ -5,8 +5,7 @@ date: 2024-11-15
 categories: [Malware, Malware Development]
 tag: [Malware, Malware Development]
 image:
-  path: /assets/img/posts/2024/test-folder/payload-placement.png
-  alt: 
+  path: /assets/img/posts/2024/payload-placement/payload-placement-banner.png
 ---
 
 In malware development, payload placement refers to where and how the malicious code (the payload) is embedded or hidden within a system to execute harmful functions without detection. Use cases for this technique could involve creating a benign-seeming executable or DLL and having it execute and load it's resorces into memory, with the resource being the payload. 
@@ -197,35 +196,35 @@ For the malware author, saving a payload to the `.rsrc` directory is way cleaner
 The steps beow illustrate how a malware author can embed a payload into the `.rsrc` section:
 
 
-![RSRC Step One](assets/images/blogs/payload-placement-offensive/rsrc-step1.png)
+![RSRC Step One](assets/img/posts/2024/payload-placement/rsrc-step1.png)
 
 To begin, inside Visual Studio, right-click on 'Recource files' and click Add -> New Item.
 
-![RSRC Step Two](assets/images/blogs/payload-placement-offensive/rsrc-step2.png)
+![RSRC Step Two](assets/img/posts/2024/payload-placement/rsrc-step2.png)
 
 Click on 'Resource File'
 
-![RSRC Step Three](assets/images/blogs/payload-placement-offensive/rsrc-step3.png)
+![RSRC Step Three](assets/img/posts/2024/payload-placement/rsrc-step3.png)
 
 This will generate a new sidebar, the Resource View. Right-click on the `.rc` file (`Resource.rc` is the default name), and select the 'Add Resource' option.
 
-![RSRC Step Four](assets/images/blogs/payload-placement-offensive/rsrc-step4.png)
+![RSRC Step Four](assets/img/posts/2024/payload-placement/rsrc-step4.png)
 
 Click 'Import'.
 
-![RSRC Step Five](assets/images/blogs/payload-placement-offensive/rsrc-step5.png)
+![RSRC Step Five](assets/img/posts/2024/payload-placement/rsrc-step5.png)
 
 Select the `calc.ico` file, which is the raw payload renamed to have the `.ico` extension.
 
-![RSRC Step Six](assets/images/blogs/payload-placement-offensive/rsrc-step6.png)
+![RSRC Step Six](assets/img/posts/2024/payload-placement/rsrc-step6.png)
 
 A prompt will appear requesting the resource type. Enter "`RCDATA`" without the quotes.
 
-![RSRC Step Seven](assets/images/blogs/payload-placement-offensive/rsrc-step7.png)
+![RSRC Step Seven](assets/img/posts/2024/payload-placement/rsrc-step7.png)
 
 After clicking `OK`, the payload should be displayed in raw binary format within the Visual Studio project.
 
-![RSRC Step Eight](assets/images/blogs/payload-placement-offensive/rsrc-step8.png)
+![RSRC Step Eight](assets/img/posts/2024/payload-placement/rsrc-step8.png)
 
 When exiting the Resource View, the "`resource.h`" header file should be visible and named according to the `.rc` file from **Step 2**. This file contains a define statement that refers to the payload's ID in the resource section (`IDR_RCDATA1`). This is important in order to be able to retrieve the payload from the resource section later.
 
@@ -317,11 +316,11 @@ Since `pTmpBuffer` now points to a writable memory region that is holding the pa
 
 The image below shows the Msfvenom shellcode stored in the resource section.
 
-![RSRC Step Nine](assets/images/blogs/payload-placement-offensive/rsrc-step9.png)
+![RSRC Step Nine](assets/img/posts/2024/payload-placement/rsrc-step9.png)
 
 Proceeding with the execution, the payload is saved in the temporary buffer.
 
-![RSRC Step Ten](assets/images/blogs/payload-placement-offensive/rsrc-step10.png)
+![RSRC Step Ten](assets/img/posts/2024/payload-placement/rsrc-step10.png)
 
 ## Conclusion
 

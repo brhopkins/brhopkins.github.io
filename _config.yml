@@ -28,15 +28,11 @@ url: "https://benhopkins.uk"
 github:
   username: brhopkins # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
-
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Ben Hopkins
   email: example@domain.com # change to your email address
-  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     - https://github.com/brhopkins
     - https://www.linkedin.com/in/ben-h-a363911aa/

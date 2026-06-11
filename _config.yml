@@ -19,7 +19,7 @@ title: brhopkins # the main title
 tagline: Malware and Threat Specialist # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A blog written by Ben Hopkins: Malware and Threat Specialist at zeroShadow. Covers malware reverse engineering, cybersecurity, history, and philosophy.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,16 +34,12 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
+  name: Ben Hopkins
   email: example@domain.com # change to your email address
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/brhopkins
+    - https://www.linkedin.com/in/ben-h-a363911aa/
 
 # Site Verification Settings
 webmaster_verifications:
